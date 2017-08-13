@@ -10,13 +10,20 @@ GPIO.setwarnings(False)
 GPIO.setup(pin,GPIO.IN)
 
 
-#--//-- Logic --//--
+# Start loop
+while True: 
+	if (GPIO.input(INPUT_PIN) == True):
+		print('3.3')
+	else:
+		print('0')
+	sleep(1);
 
+"""
 def callback(pin):  
 	if GPIO.input(pin):
-		print ("Dry")
+		print ("State 1")
 	else:
-		print ("Moist")
+		print ("State 2")
 
 # This line tells our script to keep an eye on our gpio pin and let us know when the pin goes HIGH or LOW
 GPIO.add_event_detect(18, GPIO.BOTH, bouncetime=300)
@@ -24,5 +31,6 @@ GPIO.add_event_detect(18, GPIO.BOTH, bouncetime=300)
 GPIO.add_event_callback(18, callback)
 
 while True:
-	# This line simply tells our script to wait 0.1 of a second, this is so the script doesnt hog all of the CPU
 	sleep(2)
+"""
+
