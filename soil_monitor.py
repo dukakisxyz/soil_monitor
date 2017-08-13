@@ -12,10 +12,10 @@ GPIO.setup(pin,GPIO.IN)
 
 # Start loop
 while True: 
-	if (GPIO.input(INPUT_PIN) == True):
-		print('3.3')
+	if (GPIO.input(pin) == True):
+		print('3.3V – Dry soil')
 	else:
-		print('0')
+		print('0V – Moist soil')
 	sleep(1);
 
 """
